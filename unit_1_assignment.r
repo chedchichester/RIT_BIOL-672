@@ -3,9 +3,12 @@
 # Operating System: Windows 11
 # Context: Unit 1 Assignment Part 1
 # Date Created: September 21, 2022
-# Date of Last Revision: October 7, 2022
+# Date of Last Revision: October 19, 2022
 # Libraries: ggplot2, dplyr
-# Data files: mtcars, diamonds
+# Data files: mtcars, diamonds, iris_tab, iris_purchase, iris_tab_bgnoise, 
+# iris_tab_missing, iris_tab_randclass
+
+print("Running R script...") # Let the user know the R script is now running
 
 library(ggplot2) # Loads the ggplot2 library for ggplot plotting features
 library(dplyr) # Loads the dplyr library to group dataframe elements
@@ -273,3 +276,5 @@ iris_purchase_multiple_regression <- lm(sold ~ color + attractiveness + review +
 print(summary(iris_purchase_multiple_regression))
 print("Based on the results of the multiple regression comparing the influence of color, attractiveness, review, and likelytobuy on if a flower is sold, it can be seen that no individual factor has a significant impact on selling the flower. Although, all factors together have a strong predictability on if the flower is sold. The most significant factor on if a flower sells is the likelytobuy factor, which intuitively makes sense because this factor should aim to capture the likelihood that a flower is sold to a certain customer.")
 sink() # Close connection
+
+print("Done running R script") # Let the user know the R script is done running
